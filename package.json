@@ -1,0 +1,44 @@
+{
+  "name": "kinita",
+  "productName": "KINITA POS",
+  "description": "Retail & Inventory Management System",
+  "version": "0.1.0",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "electron:dev": "electron . --development",
+    "electron:build": "vite build && electron-builder --win portable"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "lucide-react": "^0.563.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "vite": "^5.2.0"
+  },
+  "build": {
+    "appId": "com.kinita.pos",
+    "productName": "KINITA POS",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "zip",
+      "icon": "public/app-icon.png"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "asar": false
+  }
+}

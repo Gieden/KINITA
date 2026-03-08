@@ -1,0 +1,108 @@
+.sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    min-height: 100vh;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    background: #020617;
+    /* Permanent Dark Sidebar */
+    position: relative;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 20;
+    color: #94a3b8;
+    /* Slate 400 */
+}
+
+.logo-container {
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 8px;
+}
+
+.logo-img {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    /* border-radius: 12px; */
+    /* box-shadow: 0 0 20px rgba(163, 230, 53, 0.2); */
+    /* border: 2px solid rgba(255, 255, 255, 0.1); */
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to right, #ffffff, #e2e8f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #64748b;
+    /* Slate 500 */
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #94a3b8;
+    /* Inactive text */
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
+    transform: translateX(4px);
+}
+
+.nav-item.active {
+    background: transparent;
+    /* Minimal active state */
+    color: #a3e635;
+    /* Neon Green Text */
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-item.active .nav-icon {
+    color: #a3e635;
+}
+
+.nav-item .nav-icon {
+    color: #64748b;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover .nav-icon {
+    color: #f8fafc;
+}

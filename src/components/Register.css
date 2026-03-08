@@ -1,0 +1,235 @@
+/* Reuse the container bg from Login or defined here */
+.auth-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/login-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.auth-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(240, 242, 245, 0.3);
+    z-index: 0;
+}
+
+.register-panel {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 600px;
+    /* Wider than Login */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    animation: float-in 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.brand-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 4px;
+}
+
+.header-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-top: 4px;
+}
+
+/* Info Banner */
+.info-banner {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: rgba(163, 230, 53, 0.15);
+    /* Light Lime Green */
+    border: 1px solid rgba(163, 230, 53, 0.3);
+    padding: 12px 16px;
+    border-radius: 12px;
+    color: #1a202c;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.info-icon {
+    color: #4d7c0f;
+    /* Darker green for icon */
+    min-width: 16px;
+    margin-top: 2px;
+}
+
+.info-banner strong {
+    color: #365314;
+}
+
+/* Form Styles */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Reuse Input Group Styles logic */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.glass-input {
+    width: 100%;
+    padding: 12px 16px 12px 42px;
+    /* Slightly tighter padding for grid */
+    border-radius: 12px;
+    /* Slightly less rounded than login pill for grid fit? Or keep pill. Let's do rounded rect for better packing. */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.2s;
+}
+
+.glass-input:focus {
+    background: white;
+    box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.2);
+    border-color: #a3e635;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+}
+
+.action-btn {
+    background: #a3e635;
+    color: #1a202c;
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(163, 230, 53, 0.4);
+    margin-top: 8px;
+}
+
+.action-btn:hover {
+    background: #bef264;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(163, 230, 53, 0.5);
+}
+
+.auth-footer {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.auth-footer a {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Scanner Animation */
+@keyframes scan-move {
+
+    0%,
+    100% {
+        top: 10%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        top: 90%;
+        opacity: 0;
+    }
+}
+
+.scan-line {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: #a3e635;
+    box-shadow: 0 0 10px #a3e635, 0 0 20px #a3e635;
+    animation: scan-move 2s infinite linear;
+    z-index: 25;
+    pointer-events: none;
+}
+
+.face-guide-pulse {
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(163, 230, 53, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(163, 230, 53, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(163, 230, 53, 0);
+    }
+}

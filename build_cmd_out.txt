@@ -1,0 +1,151 @@
+
+> kinita@0.1.0 electron:build
+> vite build && electron-builder --win portable
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 1742 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                    [39m[1m[2m  0.63 kB[22m[1m[22m[2m │ gzip:  0.40 kB[22m
+[2mdist/[22m[32massets/login-bg-rXhyLkAz.png  [39m[1m[2m368.63 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-aYHdpmqw.css     [39m[1m[2m 63.70 kB[22m[1m[22m[2m │ gzip: 11.27 kB[22m
+[2mdist/[22m[36massets/index-C_9rjsdI.js      [39m[1m[2m330.86 kB[22m[1m[22m[2m │ gzip: 92.54 kB[22m
+[32m✓ built in 2.09s[39m
+  • electron-builder  version=26.7.0 os=10.0.26100
+  • loaded configuration  file=package.json ("build" field)
+  • author is missed in the package.json  appPackageFile=C:\Users\Kairi\Documents\Software Development\kinita\package.json
+  • executing @electron/rebuild  electronVersion=40.1.0 arch=x64 buildFromSource=false workspaceRoot=C:\Users\Kairi\Documents\Software Development\kinita projectDir=./ appDir=./
+  • installing native dependencies  arch=x64
+  • preparing       moduleName=better-sqlite3 arch=x64
+  • finished        moduleName=better-sqlite3 arch=x64
+  • completed installing native dependencies
+  • packaging       platform=win32 arch=x64 electron=40.1.0 appOutDir=release\win-unpacked
+  • asar usage is disabled — this is strongly not recommended  solution=enable asar and use asarUnpack to unpack files that must be externally available
+  • searching for node modules  pm=npm searchDir=C:\Users\Kairi\Documents\Software Development\kinita
+  • asar usage is disabled — this is strongly not recommended  solution=enable asar and use asarUnpack to unpack files that must be externally available
+  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=846ms
+  ⨯ cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\986781419.7z
+    --
+    Path = C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\986781419.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\986781419\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\986781419\darwin\10.12\lib\libssl.dylib
+    
+                    command='C:\Users\Kairi\Documents\Software Development\kinita\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\986781419.7z' '-oC:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\986781419'
+                    workingDir=C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign
+  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=840ms
+  ⨯ cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\176359175.7z
+    --
+    Path = C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\176359175.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\176359175\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\176359175\darwin\10.12\lib\libssl.dylib
+    
+                    command='C:\Users\Kairi\Documents\Software Development\kinita\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\176359175.7z' '-oC:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\176359175'
+                    workingDir=C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign
+  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=843ms
+  ⨯ cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\388308271.7z
+    --
+    Path = C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\388308271.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\388308271\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\388308271\darwin\10.12\lib\libssl.dylib
+    
+                    command='C:\Users\Kairi\Documents\Software Development\kinita\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\388308271.7z' '-oC:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\388308271'
+                    workingDir=C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign
+  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=810ms
+  ⨯ cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\225887143.7z
+    --
+    Path = C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\225887143.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\225887143\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\225887143\darwin\10.12\lib\libssl.dylib
+    
+                    command='C:\Users\Kairi\Documents\Software Development\kinita\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\225887143.7z' '-oC:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign\225887143'
+                    workingDir=C:\Users\Kairi\AppData\Local\electron-builder\Cache\winCodeSign

@@ -1,0 +1,16 @@
+{
+    "name": "Kinita POS",
+    "short_name": "Kinita",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#a3e635",
+    "description": "Antigravity Retail Management System",
+    "icons": [
+        {
+            "src": "/app-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

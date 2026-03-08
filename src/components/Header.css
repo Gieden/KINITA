@@ -1,0 +1,219 @@
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 50;
+    gap: 24px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.search-wrapper {
+    position: relative;
+    max-width: 320px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    pointer-events: none;
+}
+
+.header-search-input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    background: var(--card-bg);
+    border: none;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-primary);
+    box-shadow: var(--card-shadow);
+    transition: all 0.2s;
+}
+
+.header-search-input:focus {
+    outline: none;
+    background: var(--bg-core);
+    box-shadow: 0 0 0 2px #a3e635;
+}
+
+.connectivity-indicator {
+    display: flex;
+    gap: 16px;
+    padding: 8px 16px;
+    background: var(--glass-surface);
+    /* Theme variable */
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: var(--glass-border);
+}
+
+.status-node {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+}
+
+.status-light {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #94a3b8;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.status-node.online .status-light {
+    background: #a3e635;
+    box-shadow: 0 0 10px #a3e635;
+}
+
+.status-node.offline .status-light {
+    background: #ef4444;
+    box-shadow: 0 0 10px #ef4444;
+}
+
+.status-node.online .status-light::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    border: 1px solid #a3e635;
+    animation: pulse-out 2s infinite;
+}
+
+@keyframes pulse-out {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+.profile-wrapper {
+    position: relative;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 16px 6px 20px;
+    border-radius: 50px;
+    background: var(--card-bg) !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    height: 48px;
+    /* Fixed height for consistency */
+    min-width: unset;
+}
+
+.user-profile:hover,
+.user-profile.active {
+    transform: translateY(-2px);
+    background: var(--bg-core) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: var(--glass-border);
+}
+
+.user-profile.active {
+    border-color: #a3e635;
+    /* Neon accent on active */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.user-role {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ... */
+
+/* Dropdown */
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 200px;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 8px;
+    border: var(--glass-border);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    animation: slide-down 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ... */
+
+.dropdown-item:hover {
+    background: var(--bg-core);
+    /* Using core bg as hover state, assuming it contrasts well with card-bg */
+    opacity: 0.8;
+}
+
+.dropdown-item.logout {
+    color: #ef4444;
+    /* Red */
+}
+
+.dropdown-item.logout:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 4px 0;
+}
+
+.user-avatar-initials {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid var(--card-bg);
+    box-shadow: var(--card-shadow);
+}
